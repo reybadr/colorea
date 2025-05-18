@@ -21,15 +21,41 @@
         /* Estilos para el cuerpo de la página */
         body {
             background-color: #f0f9ff; /* Azul cielo muy claro */
+            font-family: 'Inter', sans-serif; /* Asegura que la fuente Inter se aplique globalmente */
         }
         /* Efecto hover personalizado para el botón de descarga cuando se pasa el cursor sobre el item de la galería */
         .gallery-item:hover .download-button {
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
+        /* Estilos para el botón "Volver Arriba" */
+        #toTopBtn {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #0ea5e9; /* Color sky-500 de Tailwind */
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 50%; /* Botón redondo */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;
+        }
+        #toTopBtn:hover {
+            background-color: #0284c7; /* Color sky-600 de Tailwind */
+        }
+        /* Estilo para cuando el botón de descarga está "descargando" */
+        .downloading {
+            background-color: #f59e0b !important; /* Color amber-500 de Tailwind */
+            cursor: not-allowed !important;
+        }
     </style>
 </head>
-<body>
+<body class="scroll-smooth">
 
     <header class="bg-gradient-to-r from-sky-500 to-indigo-600 text-white py-12 shadow-lg">
         <div class="container mx-auto px-6 text-center">
@@ -341,9 +367,71 @@
         </div>
     </footer>
 
+    <button id="toTopBtn" title="Volver Arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>
+    </button>
+
+
     <script>
-        // Pequeño script para actualizar el año en el footer automáticamente
+        // Actualizar el año en el footer automáticamente
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Funcionalidad para el botón "Volver Arriba"
+        const toTopButton = document.getElementById("toTopBtn");
+
+        // Mostrar el botón cuando el usuario se desplaza 200px hacia abajo desde la parte superior del documento
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                toTopButton.style.display = "block";
+                toTopButton.style.opacity = "1";
+            } else {
+                toTopButton.style.opacity = "0";
+                // Esperar a que termine la transición de opacidad para ocultarlo
+                setTimeout(() => {
+                    if (!(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)) {
+                         toTopButton.style.display = "none";
+                    }
+                }, 300); // Coincide con la duración de la transición en CSS
+            }
+        };
+
+        // Cuando el usuario hace clic en el botón, se desplaza suavemente hacia la parte superior del documento
+        toTopButton.addEventListener("click", function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // Funcionalidad para los botones de descarga
+        const downloadButtons = document.querySelectorAll(".download-button");
+
+        downloadButtons.forEach(button => {
+            const originalText = button.textContent; // Guardar el texto original del botón
+
+            button.addEventListener("click", function(event) {
+                // Prevenir la acción de descarga predeterminada si el botón ya está en estado "descargando"
+                if (button.classList.contains("downloading")) {
+                    event.preventDefault();
+                    return;
+                }
+
+                // Cambiar texto y apariencia del botón
+                button.textContent = "Descargando...";
+                button.classList.add("downloading"); // Añadir clase para cambiar color y cursor
+                button.disabled = true; // Deshabilitar botón
+
+                // Simular el proceso de descarga y luego revertir el botón
+                // En una aplicación real, la descarga se iniciaría aquí.
+                // El atributo 'download' en la etiqueta <a> ya maneja la descarga.
+                // Este setTimeout es solo para la retroalimentación visual.
+                setTimeout(() => {
+                    button.textContent = originalText; // Restaurar texto original
+                    button.classList.remove("downloading"); // Quitar clase de "descargando"
+                    button.disabled = false; // Habilitar botón nuevamente
+                }, 2000); // Tiempo de simulación de descarga (2 segundos)
+            });
+        });
+
     </script>
 
 </body>
