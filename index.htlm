@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros para Colorear Creativos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            background-color: #f0f9ff; /* Azul cielo muy claro */
+        }
+        /* Efecto hover personalizado para el botón de descarga cuando se pasa el cursor sobre el item de la galería */
+        .gallery-item:hover .download-button {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-gradient-to-r from-sky-500 to-indigo-600 text-white py-12 shadow-lg">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Mis Libros para Colorear</h1>
+            <p class="text-lg md:text-xl">
+                Descubre un mundo de creatividad. ¡Descarga, imprime y colorea tus imágenes favoritas!
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/EBF4FA/333333?text=Dinosaurio+Amigable"
+                     alt="Dibujo de dinosaurio amigable con texto 'ROAR' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Dino-Aventura</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Este simpático dinosaurio te espera. El texto "ROAR AMIGABLE" (que estaría en tu imagen) también está listo para que le des vida con tus colores.
+                    </p>
+                    <a href="https://placehold.co/600x400/EBF4FA/333333?text=Dinosaurio+Amigable"
+                       download="Dinosaurio_Amigable_Colorear.png"
+                       class="download-button inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Dinosaurio
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/FFF0F5/333333?text=Viaje+Espacial"
+                     alt="Dibujo de cohete espacial con texto 'AL INFINITO' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Explorador Estelar</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        ¡Prepárate para despegar! Colorea este cohete y el texto "AVENTURA ESPACIAL" (que estaría en tu imagen) que lo acompaña.
+                    </p>
+                    <a href="https://placehold.co/600x400/FFF0F5/333333?text=Viaje+Espacial"
+                       download="Cohete_Espacial_Colorear.png"
+                       class="download-button inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Cohete
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/E6FFFA/333333?text=Mundo+Mágico"
+                     alt="Dibujo de castillo de fantasía con texto 'SUEÑOS' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Reino de Fantasía</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Un castillo mágico te espera. Dale color a esta escena y al texto "FANTASÍA" (que estaría en tu imagen) que adorna el dibujo.
+                    </p>
+                    <a href="https://placehold.co/600x400/E6FFFA/333333?text=Mundo+Mágico"
+                       download="Castillo_Fantasia_Colorear.png"
+                       class="download-button inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Castillo
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/FFF9C4/333333?text=Animales+Alegres"
+                     alt="Dibujo de animales de la granja con texto 'AMIGOS' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Animales Alegres</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Diviértete con estos simpáticos animales. El texto "DIVERSIÓN ANIMAL" (que estaría en tu imagen) espera tus colores.
+                    </p>
+                    <a href="https://placehold.co/600x400/FFF9C4/333333?text=Animales+Alegres"
+                       download="Animales_Alegres_Colorear.png"
+                       class="download-button inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Animales
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/D1C4E9/333333?text=Aventura+Pirata"
+                     alt="Dibujo de barco pirata con texto 'TESORO' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Aventura Pirata</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        ¡Al abordaje! Colorea este barco pirata y el texto "MAPA DEL TESORO" (que estaría en tu imagen) que te guiará a la diversión.
+                    </p>
+                    <a href="https://placehold.co/600x400/D1C4E9/333333?text=Aventura+Pirata"
+                       download="Aventura_Pirata_Colorear.png"
+                       class="download-button inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Pirata
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/C8E6C9/333333?text=Jardín+Secreto"
+                     alt="Dibujo de jardín con flores y mariposas con texto 'MAGIA' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Jardín Secreto</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Explora este hermoso jardín lleno de flores. El texto "FLORES Y MARIPOSAS" (que estaría en tu imagen) está listo para colorear.
+                    </p>
+                    <a href="https://placehold.co/600x400/C8E6C9/333333?text=Jardín+Secreto"
+                       download="Jardin_Secreto_Colorear.png"
+                       class="download-button inline-block bg-lime-500 hover:bg-lime-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Jardín
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/FFCDD2/333333?text=Dulces+Sueños"
+                     alt="Dibujo de luna y estrellas con texto 'NOCHE' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Cielo Nocturno</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Una tranquila escena nocturna para relajarte coloreando. El texto "DULCES SUEÑOS" (en tu imagen) te acompañará.
+                    </p>
+                    <a href="https://placehold.co/600x400/FFCDD2/333333?text=Dulces+Sueños"
+                       download="Cielo_Nocturno_Colorear.png"
+                       class="download-button inline-block bg-red-400 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Cielo
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/B2EBF2/333333?text=Fondo+Marino"
+                     alt="Dibujo de peces y corales con texto 'OCÉANO' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Mundo Acuático</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Sumérgete en un océano de colores con peces y corales. El texto "VIDA MARINA" (en tu imagen) espera ser coloreado.
+                    </p>
+                    <a href="https://placehold.co/600x400/B2EBF2/333333?text=Fondo+Marino"
+                       download="Mundo_Acuatico_Colorear.png"
+                       class="download-button inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Océano
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/F8BBD0/333333?text=Fiesta+Divertida"
+                     alt="Dibujo de globos y confeti con texto 'CELEBRA' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">¡Hora de Celebrar!</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Globos, serpentinas y mucha alegría. Colorea la fiesta y el texto "FELICIDAD" (en tu imagen).
+                    </p>
+                    <a href="https://placehold.co/600x400/F8BBD0/333333?text=Fiesta+Divertida"
+                       download="Fiesta_Colorear.png"
+                       class="download-button inline-block bg-rose-400 hover:bg-rose-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Fiesta
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/FFE0B2/333333?text=Vehículos+Geniales"
+                     alt="Dibujo de coches y camiones con texto 'VELOCIDAD' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Transportes Asombrosos</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Coches, trenes y aviones listos para la aventura. El texto "A RODAR" (en tu imagen) necesita tu toque de color.
+                    </p>
+                    <a href="https://placehold.co/600x400/FFE0B2/333333?text=Vehículos+Geniales"
+                       download="Vehiculos_Colorear.png"
+                       class="download-button inline-block bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Vehículos
+                    </a>
+                </div>
+            </div>
+
+             <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/DCEDC8/333333?text=Deportes+Acción"
+                     alt="Dibujo de pelotas y trofeos con texto 'CAMPEÓN' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Pasión Deportiva</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Fútbol, baloncesto y más. Colorea la emoción del deporte y el texto "A JUGAR" (en tu imagen).
+                    </p>
+                    <a href="https://placehold.co/600x400/DCEDC8/333333?text=Deportes+Acción"
+                       download="Deportes_Colorear.png"
+                       class="download-button inline-block bg-lime-500 hover:bg-lime-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Deportes
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/CFD8DC/333333?text=Robots+Futuristas"
+                     alt="Dibujo de robots amigables con texto 'TECNOLOGÍA' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Amigos Robóticos</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Conoce a estos simpáticos robots del futuro. El texto "BEEP BOOP" (en tu imagen) está listo para tu creatividad.
+                    </p>
+                    <a href="https://placehold.co/600x400/CFD8DC/333333?text=Robots+Futuristas"
+                       download="Robots_Colorear.png"
+                       class="download-button inline-block bg-slate-500 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Robots
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/FFECB3/333333?text=Música+Maestro"
+                     alt="Dibujo de instrumentos musicales con texto 'MELODÍA' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Ritmo y Melodía</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Guitarras, tambores y notas musicales. El texto "SONIDOS MÁGICOS" (en tu imagen) espera tus colores.
+                    </p>
+                    <a href="https://placehold.co/600x400/FFECB3/333333?text=Música+Maestro"
+                       download="Musica_Colorear.png"
+                       class="download-button inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Música
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/BCAAA4/333333?text=Comida+Deliciosa"
+                     alt="Dibujo de frutas y postres con texto 'SABROSO' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Festín de Sabores</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Frutas, pasteles y helados para colorear. El texto "¡QUÉ RICO!" (en tu imagen) te abrirá el apetito.
+                    </p>
+                    <a href="https://placehold.co/600x400/BCAAA4/333333?text=Comida+Deliciosa"
+                       download="Comida_Colorear.png"
+                       class="download-button inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Comida
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/EEEEEE/333333?text=Superhéroes+Poder"
+                     alt="Dibujo de superhéroes en acción con texto 'VALIENTE' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Héroes en Acción</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Valientes superhéroes listos para salvar el día. El texto "SÚPER PODER" (en tu imagen) te inspirará.
+                    </p>
+                    <a href="https://placehold.co/600x400/EEEEEE/333333?text=Superhéroes+Poder"
+                       download="Superheroes_Colorear.png"
+                       class="download-button inline-block bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Héroes
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <img src="https://placehold.co/600x400/E0F2F1/333333?text=Monstruos+Amistosos"
+                     alt="Dibujo de monstruos simpáticos con texto 'ABRAZO' para colorear"
+                     class="w-full h-64 object-cover"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+Cargando';">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Monstruos Divertidos</h3>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Estos monstruos no asustan, ¡son muy amigables! Colorea sus travesuras y el texto "HOLA AMIGO" (en tu imagen).
+                    </p>
+                    <a href="https://placehold.co/600x400/E0F2F1/333333?text=Monstruos+Amistosos"
+                       download="Monstruos_Colorear.png"
+                       class="download-button inline-block bg-teal-300 hover:bg-teal-400 text-gray-800 font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out w-full text-center shadow-md hover:shadow-lg">
+                        Descargar Monstruos
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> Tu Nombre o Nombre del Proyecto. Todos los derechos reservados.</p>
+            <p class="text-sm">Diseñado con ❤️ para pequeños artistas.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Pequeño script para actualizar el año en el footer automáticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
